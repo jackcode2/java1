@@ -10,16 +10,13 @@ package wxl;
  *		3） 多少天之前的年/月/日
  */
 public class Date {
-	public int year;
-	public int month;
-	public int day;
+	private int year;
+	private int month;
+	private int day;
 	
-	public int[] day_of_month = {
+	public static final int[] day_of_month = {
 		31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31
 	};
-	public Date()
-	{
-	}
 	// 构造方法
 	// 年支持的范围 [1840, 2020]
 	// 月支持的范围 [1, 12]
@@ -46,7 +43,7 @@ public class Date {
 		this.day = day;
 	}
 	
-	public int calcDaysOfMonth(int year, int month) {
+	private static int calcDaysOfMonth(int year, int month) {
 		if (month != 2) {
 			return day_of_month[month - 1];
 		}
@@ -58,7 +55,7 @@ public class Date {
 		}
 	}
 	
-	public boolean isLeapYear(int year) {
+	public static boolean isLeapYear(int year) {
 		if (year % 4 == 0 && year % 100 != 0) {
 			return true;
 		}
@@ -69,7 +66,11 @@ public class Date {
 		
 		return false;
 	}
-	
+	public Date immutableAfter(int day)
+	{
+		Date other=new Date(year,month,day)
+		return other;
+	}
 	public Date after(int days) {
 		day += days;
 		
