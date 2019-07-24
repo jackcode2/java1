@@ -113,7 +113,7 @@ public class MyLinkedList {
 			return null;
 		}
 		
-		// 原来第一个结点，会因为没有引用指向而被回收
+		// 原来第一个结点，会因为没有引用指向而被回收没有利用
 		return head.next;
 	}
 	
