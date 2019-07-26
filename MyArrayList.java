@@ -66,7 +66,6 @@ public class MyArrayList {
 		
 		array[--size] = 0;
 	}
-	
 	public void earse(int index) {
 		if (size <= 0) {
 			System.err.println("顺序表为空");
