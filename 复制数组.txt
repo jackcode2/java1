@@ -1,0 +1,16 @@
+import java.util.Arrays;
+
+public class wxl{
+	public static void main(String[]args) { 
+      int arr[] ={1,2,3,4,5,6};
+      int b[]=/*Arrays.copyOfRange*/(arr,2,5);
+      System.out.println("arr数组");
+      for(int temp:arr) {
+      System.out.print(temp+"  ");
+      }
+      System.out.println("\nb数组");
+      for(int temp:b) {
+    	  System.out.print(temp+"  ");
+      }
+	}
+}
