@@ -1,0 +1,61 @@
+﻿数组的操作
+根据下标访问对应的元素   [index]  0<=index<length   int 类型
+遇到的异常为    NullpointerException/ArrayLndexOutOfBounds
+获取数组的长度          a.length  NullpointerException
+数组的遍历
+  for(int i=0;i<a.length;i++)
+  {
+  a[i];
+  }
+  for(int element:a)          foreach形式  （老版本可能不支持）
+  {
+  element;
+  }
+理解什么是引用：
+1.引用是用来找到实际对象的线索
+2.Java内存中有三个区域
+栈区                    堆区                      方法区
+3.4种形式的变量    1.形参     栈区
+                   2.局部变量  栈区
+				   3.属性     堆区
+				   4.静态属性   方法区
+4.一些操作的理解
+int [ ] a={1,2,3,4,5}
+int [ ] b=a   b也指向a指向的数组对象
+1）   b={12,23,43}    b指向新的数组，不影响a和a指向的对象
+2）   b[0]=100;      改变的是b指向的数组会影响a
+5.方法调用过程中（无论是基本类型还是引用类型）
+java都是值传递  形参的改变不影响实参
+
+
+JDK 支持的一下数组操作
+java.util.Arrays  包
+先导入才能使用
+import java.util.Arrays;
+java.lang.System 包
+System.arraycopy (源数组引用，源下标，目标数组引用，长度)
+
+力扣     牛客网    账号
+
+
+
+
+
+
+
+
+
+
+
+
+				   
+				   
+				   
+				   
+				   
+				   
+				   
+				   
+				   
+				   
+				   
